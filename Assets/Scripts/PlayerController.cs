@@ -22,19 +22,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        forwardInput = Input.GetAxis("Vertical" + inputID);
-        horizontalInput = Input.GetAxis("Horizontal" + inputID);
-
-        // Moves the car forward based on vertical input
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-
-        // Rotates the car based on horizontal input
-        transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
-
         if (Input.GetKeyDown(switchKey))
         {
             mainCamera.enabled = !mainCamera.enabled;
             hoodCamera.enabled = !hoodCamera.enabled;
         }
+    }
+
+    void FixedUpdate()
+    {
+        forwardInput = Input.GetAxis("Vertical" + inputID);
+        horizontalInput = Input.GetAxis("Horizontal" + inputID);
+
+        // Moves the car forward based on vertical input
+        transform.Translate(Vector3.forward * Time.fixedDeltaTime * speed * forwardInput);
+
+        // Rotates the car based on horizontal input
+        transform.Rotate(Vector3.up, turnSpeed * Time.fixedDeltaTime * horizontalInput);
     }
 }
