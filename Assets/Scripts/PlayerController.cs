@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;
     public Camera hoodCamera;
     public KeyCode switchKey;
+    public KeyCode restartKey;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,11 @@ public class PlayerController : MonoBehaviour
         {
             mainCamera.enabled = !mainCamera.enabled;
             hoodCamera.enabled = !hoodCamera.enabled;
+        }
+
+        if (Input.GetKeyDown(restartKey))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

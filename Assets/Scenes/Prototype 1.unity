@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: switchKey
       value: 47
       objectReference: {fileID: 0}
+    - target: {fileID: 191885851894203466, guid: 568303823045d7743a19096d684c0d6a, type: 3}
+      propertyPath: restartKey
+      value: 114
+      objectReference: {fileID: 0}
     - target: {fileID: 3879473910615690666, guid: 568303823045d7743a19096d684c0d6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -1405,6 +1409,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 191885851894203466, guid: 532fd6921ef92b843aa49b416b885857, type: 3}
+      propertyPath: restartKey
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 3879473910615690666, guid: 532fd6921ef92b843aa49b416b885857, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
